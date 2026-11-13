@@ -1,0 +1,15 @@
+# Yang diunggah ke GitHub HANYA file yang dibutuhkan dashboard.
+# File data asli (.xlsx), proposal, manual, dokumen Word, sesi, dan model
+# sengaja tidak ikut diunggah.
+/*
+!/.gitignore
+!/app.py
+!/src/
+!/data/
+!/.streamlit/
+!/requirements.txt
+!/packages.txt
+!/README.md
+
+__pycache__/
+*.pyc

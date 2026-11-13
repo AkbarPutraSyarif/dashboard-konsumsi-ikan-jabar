@@ -1,0 +1,11 @@
+# Versi dikunci sama dengan yang dipakai saat pengembangan, supaya hasil di
+# Streamlit Community Cloud sama dengan di laptop.
+streamlit==1.65.0
+pandas==3.0.0
+numpy==2.2.4
+openpyxl==3.1.5
+scikit-learn==1.9.0
+xgboost==3.4.1
+lightgbm==4.7.0
+joblib==1.5.3
+plotly==7.1.0
