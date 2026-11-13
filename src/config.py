@@ -25,14 +25,17 @@ LINK_GOOGLE_DRIVE = "https://drive.google.com/drive/folders/1CAYE-dMZUQ_S4cuRj-S
 TAHUN_MIN = 2015
 TAHUN_MAX = 2025
 
-# Hyperparameter (sama dengan modeling_jabar.py)
+# Hyperparameter terbaik hasil eksperimen (RMSE rata-rata walk-forward terendah):
+#   XGBoost  : n_estimators=100, learning_rate=0.03, max_depth=3
+#   LightGBM : n_estimators=100, learning_rate=0.03, num_leaves=7
+# Parameter lain disamakan dengan notebook eksperimen Bab 4.
 PARAM_XGB = dict(
-    n_estimators=300, learning_rate=0.05, max_depth=5,
+    n_estimators=100, learning_rate=0.03, max_depth=3,
     subsample=0.8, colsample_bytree=0.8, random_state=42, n_jobs=-1,
 )
 PARAM_LGBM = dict(
-    n_estimators=300, learning_rate=0.05, max_depth=5,
-    subsample=0.8, colsample_bytree=0.8, random_state=42, verbosity=-1, n_jobs=-1,
+    n_estimators=100, learning_rate=0.03, num_leaves=7, max_depth=-1,
+    subsample=0.8, subsample_freq=1, colsample_bytree=0.8, random_state=42, verbosity=-1, n_jobs=-1,
 )
 
 TARGET_COL = "Konsumsi Ikan (Kg/Kapita)"
